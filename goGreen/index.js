@@ -1,40 +1,58 @@
 import jsonfile from "jsonfile";
 import moment from "moment";
 import simpleGit from "simple-git";
-import random from "random";
 
 const path = "./data.json";
 
-const markCommit = (x, y) => {
-  const date = moment()
-    .subtract(1, "y")
-    .add(1, "d")
-    .add(x, "w")
-    .add(y, "d")
-    .format();
+const git = simpleGit();
 
-  const data = {
-    date: date,
-  };
+// Start: September 1, 2025
+let date = moment.parseZone("2025-09-01T12:00:00+05:30");
 
-  jsonfile.writeFile(path, data, () => {
-    simpleGit().add([path]).commit(date, { "--date": date }).push();
-  });
+// End: September 30, 2025
+const endDate = moment.parseZone("2025-09-30T12:00:00+05:30");
+
+const makeCommits = async () => {
+  while (date.isSameOrBefore(endDate, "day")) {
+    // Random commits between 1 and 5
+    const commitsPerDay = Math.floor(Math.random() * 5) + 1;
+
+    console.log(`\n${date.format("YYYY-MM-DD")} → ${commitsPerDay} commits`);
+
+    for (let i = 1; i <= commitsPerDay; i++) {
+      // Random time between 9 AM and 8 PM
+      const commitDate = date
+        .clone()
+        .hour(Math.floor(Math.random() * 12) + 9)
+        .minute(Math.floor(Math.random() * 60))
+        .second(Math.floor(Math.random() * 60))
+        .format();
+
+      const data = {
+        date: commitDate,
+        commit: i,
+      };
+
+      jsonfile.writeFileSync(path, data);
+
+      await git.add([path]);
+
+      await git.commit(`Update for ${commitDate}`, [path], {
+        "--date": commitDate,
+      });
+
+      console.log(`  Commit ${i}: ${commitDate}`);
+    }
+
+    // Move to next day
+    date.add(1, "day");
+  }
+
+  console.log("\nAll commits created!");
+
+  await git.push();
+
+  console.log("Successfully pushed!");
 };
 
-const makeCommits = (n) => {
-  if(n===0) return simpleGit().push();
-  const x = random.int(0, 54);
-  const y = random.int(0, 6);
-  const date = moment().subtract(1, "y").add(1, "d").add(x, "w").add(y, "d").format();
-
-  const data = {
-    date: date,
-  };
-  console.log(date);
-  jsonfile.writeFile(path, data, () => {
-    simpleGit().add([path]).commit(date, { "--date": date },makeCommits.bind(this,--n));
-  });
-};
-
-makeCommits(100);
+makeCommits();
