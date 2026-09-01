@@ -1,0 +1,25 @@
+.header-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem;
+}
+.page-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+
+  border-radius: 20px;
+
+  background: #e0e5ec;
+
+  box-shadow:
+    -8px -8px 16px #ffffff,
+    8px 8px 16px #a3b1c6;
+}
+
+i {
+  cursor: pointer;
+}

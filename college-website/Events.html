@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="icon" href="clglogo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+  <title>Events | GCET</title>
+  <style>
+    /* Responsive slideshow */
+    .slideshow-wrap { max-width: 700px; position: relative; margin: 0 auto; }
+    .slide-item { display: none; }
+    .slide-item img { width: 100%; height: auto; max-height: 340px; object-fit: cover; border-radius: 8px; filter: drop-shadow(0 0 8px rgba(0,0,0,0.3)); }
+    .slide-controls { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 10px; }
+    .slide-btn { cursor: pointer; background: #0870c0; color: white; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+    .slide-btn:hover { background: #055a9f; }
+    .slide-dots { display: flex; gap: 8px; }
+    .sdot { width: 14px; height: 14px; border-radius: 50%; background: #bbb; cursor: pointer; transition: background 0.3s; }
+    .sdot.active { background: #555; }
+    .event-section { padding: 24px 20px 10px; }
+    .event-row { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; margin-bottom: 40px; }
+    .event-row.reverse { flex-direction: row-reverse; }
+    .event-row .slideshow-wrap { flex: 1 1 300px; }
+    .event-row .event-text { flex: 1 1 260px; }
+    .event-text h1 { font-size: clamp(1.2rem,2.5vw,1.8rem); color: rgb(12,12,106); font-family: "Playfair Display",serif; margin-bottom: 10px; }
+    .event-text p { font-size: clamp(0.95rem,1.7vw,1.3rem); line-height: 1.6; font-family: "Playfair Display",serif; }
+    @media(max-width:600px){ .event-row,.event-row.reverse{flex-direction:column;} }
+  </style>
+</head>
+<body>
+
+  <div class="college-name">
+    <ul>
+      <li><img src="clglogo.png" alt="College Logo" /></li>
+      <li>GOVERNMENT COLLEGE OF ENGINEERING THANJAVUR - 613402 <br />
+          அரசு பொறியியல் கல்லூரி, தஞ்சாவூர் - 613402 <br />
+          Approved by AICTE and affiliated to Anna University</li>
+      <li><img src="tamil-removebg-preview.png" alt="TN Logo" /></li>
+    </ul>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
+        <a href="index.html#CSE">ABOUT US</a>
+        <a href="Academic.html">ACADEMICS</a>
+        <a href="staffs.html">FACULTY</a>
+        <a href="Events.html" class="active">EVENTS</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="login-form.html" target="_blank">LOGIN</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="event-section">
+
+    <!-- EVENT 1 -->
+    <div class="event-row">
+      <div class="slideshow-wrap" id="sw1">
+        <div class="slide-item"><img src="image-2.jpg" alt="Naan Mudhalvan 1" /></div>
+        <div class="slide-item"><img src="image-3.jpg" alt="Naan Mudhalvan 2" /></div>
+        <div class="slide-item"><img src="image-4.jpg" alt="Naan Mudhalvan 3" /></div>
+        <div class="slide-item"><img src="image-1.jpg" alt="Naan Mudhalvan 4" /></div>
+        <div class="slide-controls">
+          <button class="slide-btn prev-btn" data-sw="sw1">&#10094;</button>
+          <div class="slide-dots" id="dots-sw1"></div>
+          <button class="slide-btn next-btn" data-sw="sw1">&#10095;</button>
+        </div>
+      </div>
+      <div class="event-text">
+        <h1>Naan Mudhalvan Started</h1>
+        <p>Naan Mudhalvan started in the year 2022. In total, 1095 students attended the 19 courses
+        and 20 staffs attended the training and enhanced their skills during odd semester of 2022-2023.
+        564 students attended 13 courses and 15 staffs trained and enhanced their skills during even semester of 2022-2023.</p>
+      </div>
+    </div>
+
+    <!-- EVENT 2 -->
+    <div class="event-row reverse">
+      <div class="slideshow-wrap" id="sw2">
+        <div class="slide-item"><img src="image-5.jpg" alt="Hackathon 1" /></div>
+        <div class="slide-item"><img src="image-8.jpg" alt="Hackathon 2" /></div>
+        <div class="slide-item"><img src="image-7.jpg" alt="Hackathon 3" /></div>
+        <div class="slide-item"><img src="image-6.jpg" alt="Hackathon 4" /></div>
+        <div class="slide-controls">
+          <button class="slide-btn prev-btn" data-sw="sw2">&#10094;</button>
+          <div class="slide-dots" id="dots-sw2"></div>
+          <button class="slide-btn next-btn" data-sw="sw2">&#10095;</button>
+        </div>
+      </div>
+      <div class="event-text">
+        <h1>Internal Hackathon 2023</h1>
+        <p>The Smart India Hackathon was conducted in our College by CSE Department on 20.09.2023.
+        SIH is a platform where students collaborate to solve real-world problems, engage in open innovation,
+        and contribute to improving governance and quality of life in India.</p>
+      </div>
+    </div>
+
+    <!-- EVENT 3 -->
+    <div class="event-row">
+      <div class="slideshow-wrap" id="sw3">
+        <div class="slide-item"><img src="IV-1.png" alt="Industrial Visit 1" /></div>
+        <div class="slide-item"><img src="IV-2.jpg" alt="Industrial Visit 2" /></div>
+        <div class="slide-item"><img src="IV-3.jpg" alt="Industrial Visit 3" /></div>
+        <div class="slide-controls">
+          <button class="slide-btn prev-btn" data-sw="sw3">&#10094;</button>
+          <div class="slide-dots" id="dots-sw3"></div>
+          <button class="slide-btn next-btn" data-sw="sw3">&#10095;</button>
+        </div>
+      </div>
+      <div class="event-text">
+        <h1>Industrial Visit</h1>
+        <p>Industrial visits provide the students with an opportunity to learn practically through
+        interaction, working methods and employment practices. Industrial visits grant the students a
+        great opportunity to interact with industries and know more about the industrial environment.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-content">
+    <div class="footer-1">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Follow Us On</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/groups/135893600199107" target="_blank"><img src="fb.png" alt="Facebook" /></a>
+            <a href="https://twitter.com/GCEThanjavur?t=M916JnuWlmFhj-XQbk3cRQ&s=09" target="_blank"><img src="twitter.png" alt="Twitter" /></a>
+            <a href="https://www.instagram.com/gce_sengipatti/" target="_blank"><img src="insta.png" alt="Instagram" /></a>
+            <a href="https://wa.me/919994873594"><img src="whatsapp.png" alt="WhatsApp" /></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="https://gcetj.edu.in/news-archives" target="_blank">News &amp; Events</a></li>
+            <li><a href="https://gcetj.edu.in/?q=mandatory-disclosure-0#" target="_blank">Admission Procedure</a></li>
+            <li><a href="#">Fee structure</a></li>
+            <li><a href="#">Circulars/Minutes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Downloads</h4>
+          <ul>
+            <li><a href="https://gcetj.edu.in/internal-hackathon-2023?q=mandatory-disclosure-0" target="_blank">Mandatory Disclosure</a></li>
+            <li><a href="#" target="_blank">Faculty/Staff forms</a></li>
+            <li><a href="https://gcetj.edu.in/internal-hackathon-2023?q=scholarship-form" target="_blank">Govt scholarship forms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <address>
+            Government College of Engineering Thanjavur<br />
+            Tamil Nadu - 613402<br />
+            Phone: 04362 221112, 221113<br />
+            Fax: 04362 221112<br />
+            E-mail: gcesengipatti@gmail.com
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>Copyright &copy; Government College Of Engineering - Thanjavur, 2024</div>
+        <div>Developed &amp; Maintained by Joel ⚔️</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Generic responsive slideshow
+    function initSlideshow(wrapperId) {
+      const wrap = document.getElementById(wrapperId);
+      const slides = wrap.querySelectorAll('.slide-item');
+      const dotsContainer = document.getElementById('dots-' + wrapperId);
+      let idx = 0;
+
+      slides.forEach((_, i) => {
+        const d = document.createElement('span');
+        d.className = 'sdot' + (i === 0 ? ' active' : '');
+        d.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(d);
+      });
+
+      function goTo(n) {
+        slides[idx].style.display = 'none';
+        dotsContainer.children[idx].classList.remove('active');
+        idx = (n + slides.length) % slides.length;
+        slides[idx].style.display = 'block';
+        dotsContainer.children[idx].classList.add('active');
+      }
+
+      goTo(0);
+
+      wrap.querySelector('.prev-btn').addEventListener('click', () => goTo(idx - 1));
+      wrap.querySelector('.next-btn').addEventListener('click', () => goTo(idx + 1));
+    }
+
+    initSlideshow('sw1');
+    initSlideshow('sw2');
+    initSlideshow('sw3');
+  </script>
+  <script src="navbar.js"></script>
+</body>
+</html>

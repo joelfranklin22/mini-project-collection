@@ -1,0 +1,500 @@
+/* ===================================================
+   GCET - Responsive CSS
+   Replaces sample.css & sample1.css
+   =================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: justify;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a:focus { color: rgb(19, 8, 172); }
+
+/* ---- COLLEGE NAME HEADER ---- */
+.college-name {
+  background-color: #0870c0;
+}
+.college-name ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  margin: 0;
+  list-style: none;
+  color: rgb(235, 229, 229);
+  line-height: 1.5;
+  gap: 10px;
+}
+.college-name ul li {
+  list-style: none;
+}
+.college-name ul li:nth-child(2) {
+  flex: 1;
+  text-align: center;
+  font-size: clamp(0.75rem, 2vw, 1.3rem);
+}
+.college-name ul li img {
+  display: block;
+}
+.college-name ul li:first-child img { width: clamp(55px, 8vw, 110px); height: auto; }
+.college-name ul li:last-child img  { width: clamp(60px, 9vw, 130px); height: auto; }
+
+/* ---- NAVBAR ---- */
+.navbar {
+  background-color: #f47310;
+  position: relative;
+  z-index: 100;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  min-height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-links a {
+  display: block;
+  padding: 18px 14px;
+  text-decoration: none;
+  font-size: clamp(0.85rem, 1.2vw, 1.2rem);
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover {
+  background: rgba(0,0,0,0.15);
+  text-decoration: underline;
+}
+.nav-links a.active {
+  background: rgba(0,0,0,0.2);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f47310;
+    padding-bottom: 10px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a {
+    padding: 12px 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    width: 100%;
+  }
+  .nav-inner { flex-wrap: wrap; }
+}
+
+/* ---- HERO / BACK IMAGE ---- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a2e;
+  min-height: 280px;
+}
+.hero img.hero-img {
+  width: 100%;
+  max-height: 630px;
+  object-fit: cover;
+  display: block;
+}
+.head-content {
+  position: absolute;
+  bottom: 15%;
+  left: 4%;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.1rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.35);
+  padding: 10px 18px;
+  border-radius: 6px;
+  line-height: 1.4;
+}
+
+/* ---- SECTIONS ---- */
+.About-college, .About-dep {
+  padding: 20px 20px 10px;
+}
+.About-dep { background-color: #f9f9ff; }
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-family: "DM Serif Display", serif;
+  color: red;
+  margin-left: 5px;
+}
+
+.clg-content, .cse-content {
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  line-height: 1.6;
+  max-width: 100%;
+}
+
+ol { padding-left: 20px; }
+ol > li {
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  line-height: 1.7;
+}
+dt { font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 600; }
+
+/* ---- NEWS & UPDATES ---- */
+#new {
+  margin: 20px 0;
+}
+#newsh {
+  background-color: #0870c0;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  max-width: 100%;
+}
+#newshp {
+  margin: 8px;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  animation: newsandupdates 5s infinite;
+}
+@keyframes newsandupdates {
+  10%  { color: #000473; }
+  30%  { color: red; }
+  50%  { color: orange; }
+  70%  { color: yellow; }
+  90%  { color: green; }
+}
+#newsb {
+  margin-top: 10px;
+  height: 200px;
+  overflow: hidden;
+}
+#newsc1 {
+  background-color: #0870c0;
+  padding: 5px 5px 5px 14px;
+  width: 100px;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: white;
+}
+.newsc2 {
+  margin-left: 115px;
+  background-color: #f1f1f1;
+  max-width: 100%;
+  margin-top: -50px;
+  min-height: 45px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+}
+.newsc2:hover { color: red; cursor: pointer; text-decoration: underline; }
+
+/* ---- PLACEMENT TABLES ---- */
+.section {
+  padding: 20px;
+}
+.placement-tables {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+.section-1-table, .section-2-table {
+  flex: 1 1 320px;
+  min-width: 280px;
+}
+h3 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin-left: 0;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: none;
+}
+table th {
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+  color: #000473;
+  padding: 10px 8px;
+}
+table td {
+  font-size: clamp(0.8rem, 1.4vw, 1rem);
+  text-align: center;
+  padding: 8px 6px;
+}
+table tr:nth-of-type(2n) { background-color: #f6f6f6; }
+
+/* Scrollable tables on small screens */
+.table-scroll { overflow-x: auto; }
+
+/* ---- FOOTER ---- */
+.footer-content { margin-top: 30px; }
+.footer-1 {
+  background-color: #0870c0;
+  width: 100%;
+  padding: 24px 20px 16px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  color: white;
+}
+.footer-col h4 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 6px;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.footer-col ul li { margin-bottom: 6px; }
+.footer-col ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.footer-col ul li a:hover { text-decoration: underline; }
+.footer-col address {
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: white;
+}
+.social-icons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+.social-icons a img {
+  width: 33px; height: 33px; object-fit: contain;
+  transition: filter 0.2s;
+}
+.social-icons a:hover img { filter: drop-shadow(0 0 5px white); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.3);
+  margin-top: 20px;
+  padding-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  font-size: 0.9rem;
+  gap: 8px;
+}
+
+/* ---- UTILITY ---- */
+b { color: red; }
+
+/* ---- INNER PAGE NAVBAR (orange bar) used in sub-pages ---- */
+.Header.links .back-color,
+.back-color {
+  height: 60px;
+  background-color: #f47310;
+}
+
+/* ---- ACADEMIC PAGE ---- */
+.academic-section {
+  padding: 20px;
+}
+.academic-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+.academic-block.reverse { flex-direction: row-reverse; }
+.academic-block img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,0.3));
+  border-radius: 6px;
+}
+.academic-block .text {
+  flex: 1 1 280px;
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  line-height: 1.7;
+}
+.academic-block .text ul {
+  padding-left: 20px;
+  font-size: clamp(0.95rem, 1.6vw, 1.3rem);
+}
+.academic-block .text ul li { margin-bottom: 6px; }
+li::marker { color: red; }
+h1 {
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-family: "DM Serif Display", serif;
+  color: darkblue;
+  margin-left: 10px;
+}
+
+/* ---- FACULTY PAGE ---- */
+.faculty-intro {
+  padding: 16px 20px 0;
+}
+.heading-faculty {
+  color: gold;
+  letter-spacing: 1px;
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-family: "Playfair Display", serif;
+  margin-left: 0;
+}
+.about-faculty {
+  font-size: clamp(0.95rem, 1.8vw, 1.4rem);
+  font-family: "Playfair Display", serif;
+}
+.faculty-table-wrap {
+  padding: 16px 10px 30px;
+  overflow-x: auto;
+}
+.faculty-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-size: clamp(0.85rem, 1.5vw, 1.2rem);
+  text-align: center;
+}
+.faculty-table thead {
+  background-color: rgb(23, 50, 170);
+  color: white;
+}
+.faculty-table thead td {
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.7vw, 1.5rem);
+  padding: 12px 8px;
+}
+.faculty-table td {
+  padding: 10px 8px;
+  vertical-align: middle;
+}
+.faculty-table tr:nth-child(2n) { background-color: #f6f6f6; }
+.faculty-table img {
+  width: clamp(60px, 10vw, 130px);
+  height: clamp(60px, 10vw, 130px);
+  object-fit: cover;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 8px rgb(23,10,65));
+}
+
+/* ---- CONTACT PAGE ---- */
+.contact-page { padding: 20px; }
+.clg-contact {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.contact-table {
+  width: 100%;
+  min-width: 400px;
+  border-collapse: collapse;
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+  text-align: center;
+}
+.contact-table thead { color: red; font-weight: 600; font-size: clamp(0.9rem, 1.8vw, 1.3rem); }
+.contact-table td { padding: 10px 8px; }
+.contact-table tr:nth-child(2n) { background-color: #f6f6f6; }
+.contact-table a { text-decoration: none; color: rgb(12,44,201); }
+.contact-table a:hover { text-decoration: underline; color: red; }
+
+/* ---- EVENTS PAGE ---- */
+.events-section { padding: 20px; }
+.event-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+.event-block.reverse { flex-direction: row-reverse; }
+.event-block img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.3));
+}
+.event-block .text {
+  flex: 1 1 260px;
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  line-height: 1.6;
+  font-family: "Playfair Display", serif;
+}
+
+/* ---- ANIMATIONS ---- */
+.i1 { animation: popIn 1s 1s 1; }
+.i2 { animation: popIn 1s 2s 1; }
+.i3 { animation: popIn 1s 3s 1; }
+.i4 { animation: popIn 1s 4s 1; }
+.i5 { animation: popIn 1s 5s 1; }
+@keyframes popIn {
+  60%  { font-size: 115%; color: blue; }
+  100% { font-size: 100%; color: inherit; }
+}
+
+/* ---- RESPONSIVE TWEAKS ---- */
+@media (max-width: 600px) {
+  .college-name ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+  .head-content { font-size: 1rem; bottom: 8%; }
+  .placement-tables { flex-direction: column; }
+  .academic-block, .academic-block.reverse { flex-direction: column; }
+  .event-block, .event-block.reverse { flex-direction: column; }
+  #newsc1 { width: 80px; font-size: 0.8rem; }
+  .newsc2 { margin-left: 96px; font-size: 0.82rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 400px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}

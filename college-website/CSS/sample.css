@@ -1,0 +1,246 @@
+body{
+    margin: 0;
+    text-align: justify;
+}
+a:focus{
+    color: rgb(19, 8, 172);
+}
+.college-name ul{
+  display: flex;
+  justify-content:space-around;
+  /* background-color: #000473; */
+  /* background-color: #a00a0a; */
+  background-color: #0870c0;
+  padding:8px;
+  margin: 0;
+  font-size:1.5rem ;
+  color: rgb(235, 229, 229);
+  line-height: 1.5;
+}
+.college-name ul,li{
+    list-style: none;
+}
+.back-image img {
+    object-fit: contain;
+    position: relative;
+    margin-top: -30px;
+  }
+  .Header a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 520;
+  }
+  .Header a:hover{
+    font-size: 1.5rem;
+    text-decoration:underline;
+    color:rgb(0, 0, 0) ;
+    text-shadow: 0px 0px 10px #0048ff;
+  }
+.home a{
+    position: absolute;
+    display: inline;
+    top:20%;
+    left: 3%;
+}
+.about-us a{
+    position: absolute;
+    display: inline;
+    top:20%;
+    left: 15%;
+}.academics a{
+    position: absolute;
+    display: inline;
+    left: 30%;
+    top:20%;
+}.staffs a{
+    position: absolute;
+    display: inline;
+    top:20%;
+    right: 45%;
+}
+.event a{
+    position: absolute;
+    display: inline;
+    top:20%;
+    right:30%;
+}
+.contact a{
+    position: absolute;
+    display: inline;
+    top:20%;
+    right: 15%;
+}
+.login a{
+    position: absolute;
+    display: inline;
+    top: 20%;
+    right: 3%;
+}
+.head-content{
+    position: absolute;
+    top: 35%;
+    color:rgb(9, 9, 9);
+    left:3%;
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 0px 0px 2px #24428e;
+}
+h2{
+    margin-left: 15px;
+    font-size: 2rem;
+    font-family: "DM Serif Display", serif;
+    color: red;
+}
+.About-dep{
+    background-color: #f9f9ff;
+}
+.clg-content,.cse-content,ol>li{
+    margin-left: 50px;
+    max-width: 1400px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    list-style-type:decimal;
+}
+dt{
+    font-size: 1.6rem;
+}
+/* FOOTER */
+.links a {
+    position: absolute;
+    top: 19%;
+  }
+  .footer-1 {
+    position: relative;
+    background-color: #0870c0;
+    border: solid;
+    border: none;
+    width:1505px;
+    height: 244px;
+  }
+  .footer-link-1 {
+    position: absolute;
+    color: white;
+    top: 4%;
+    left: 3%;
+    font-size: 1.2rem;
+  }
+  .footer-link-2 {
+    color: white;
+    position: absolute;
+    font-size: 1.2rem;
+    top: 4%;
+    left: 24%;
+  }
+  .footer-link-3 {
+    color: white;
+    position: absolute;
+    font-size: 1.2rem;
+    top: 4%;
+    left: 50%;
+  }
+  .footer-link-4 {
+    color: white;
+    top: 4%;
+    left: 70%;
+    position: absolute;
+    font-size: 1.2rem;
+  }
+
+  .footer-2-links {
+    position: absolute;
+    top: 26%;
+    left: 3%;
+  }
+  .footer-2-links a:hover {
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
+  }
+  .list-quick a {
+    color: white;
+    text-decoration: none;
+  }
+  .list-quick {
+    color: white;
+    top: 17%;
+    left: 22%;
+    position: absolute;
+  }
+  .list-downloads a {
+    color: white;
+    text-decoration: none;
+  }
+  .list-downloads {
+    position: absolute;
+    color: white;
+    top: 18%;
+    left: 48%;
+  }
+  .foot-end-left {
+    position: absolute;
+    left: 2%;
+    color: white;
+  }
+  .foot-end-right {
+    position: absolute;
+    right: 5%;
+    color: white;
+  }
+  .list-downloads-list a {
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  .list-quick-link a {
+    line-height: 1.5;
+    font-size: 1.1rem;
+  }
+  .list-quick-link a:hover,
+  .list-downloads-list a:hover {
+    text-decoration: underline;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+  }
+  .contact-link {
+    position: absolute;
+    top: 23%;
+    right: 7%;
+    line-height: 1.3;
+    font-size: 1.1rem;
+    color: white;
+  }
+  hr {
+    margin-top: 190px;
+  }
+
+  /* Table 1 */
+
+  .section{
+    position: relative;
+  }
+  .section-2-table{
+      position: absolute;
+      top: 9%;
+      right: 4%;
+  }
+  h3{
+    font-size: 1.6rem;
+    margin-left: 300px;
+  }
+table{
+    border-collapse: collapse;
+    margin-left: 90px;
+    border: none;
+}
+table th{
+  font-size: 1.25rem;
+  color: #000473;
+}
+table td{
+  font-size: 1.1rem;
+  text-align: center;
+}
+table tr:nth-of-type(2n){
+
+  background-color: #f6f6f6;
+}
+b{
+  color:red;
+}

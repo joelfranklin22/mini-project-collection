@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/mini-project/checkers/css/style.css" />
+
+    <title>Checkers</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="game-header"></header>
+
+      <section class="board-container">
+        <div class="board">
+          <table class="board-structure">
+            <!-- ROW 1 -->
+            <tr>
+              <td class="cell dark-cell" data-row="0" data-col="0">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="0" data-col="1"></td>
+
+              <td class="cell dark-cell" data-row="0" data-col="2">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="0" data-col="3"></td>
+
+              <td class="cell dark-cell" data-row="0" data-col="4">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="0" data-col="5"></td>
+
+              <td class="cell dark-cell" data-row="0" data-col="6">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="0" data-col="7"></td>
+            </tr>
+
+            <!-- ROW 2 -->
+            <tr>
+              <td class="cell light-cell" data-row="1" data-col="0"></td>
+
+              <td class="cell dark-cell" data-row="1" data-col="1">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="1" data-col="2"></td>
+
+              <td class="cell dark-cell" data-row="1" data-col="3">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="1" data-col="4"></td>
+
+              <td class="cell dark-cell" data-row="1" data-col="5">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="1" data-col="6"></td>
+
+              <td class="cell dark-cell" data-row="1" data-col="7">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+            </tr>
+
+            <!-- ROW 3 -->
+            <tr>
+              <td class="cell dark-cell" data-row="2" data-col="0">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="2" data-col="1"></td>
+
+              <td class="cell dark-cell" data-row="2" data-col="2">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="2" data-col="3"></td>
+
+              <td class="cell dark-cell" data-row="2" data-col="4">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="2" data-col="5"></td>
+
+              <td class="cell dark-cell" data-row="2" data-col="6">
+                <img
+                  class="piece black-piece"
+                  src="/mini-project/checkers/assets/images/black-piece.png"
+                  alt="Black Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="2" data-col="7"></td>
+            </tr>
+
+            <!-- ROW 4 -->
+            <tr>
+              <td class="cell light-cell" data-row="3" data-col="0"></td>
+              <td class="cell dark-cell" data-row="3" data-col="1"></td>
+              <td class="cell light-cell" data-row="3" data-col="2"></td>
+              <td class="cell dark-cell" data-row="3" data-col="3"></td>
+              <td class="cell light-cell" data-row="3" data-col="4"></td>
+              <td class="cell dark-cell" data-row="3" data-col="5"></td>
+              <td class="cell light-cell" data-row="3" data-col="6"></td>
+              <td class="cell dark-cell" data-row="3" data-col="7"></td>
+            </tr>
+
+            <!-- ROW 5 -->
+            <tr>
+              <td class="cell dark-cell" data-row="4" data-col="0"></td>
+              <td class="cell light-cell" data-row="4" data-col="1"></td>
+              <td class="cell dark-cell" data-row="4" data-col="2"></td>
+              <td class="cell light-cell" data-row="4" data-col="3"></td>
+              <td class="cell dark-cell" data-row="4" data-col="4"></td>
+              <td class="cell light-cell" data-row="4" data-col="5"></td>
+              <td class="cell dark-cell" data-row="4" data-col="6"></td>
+              <td class="cell light-cell" data-row="4" data-col="7"></td>
+            </tr>
+
+            <!-- ROW 6 -->
+            <tr>
+              <td class="cell light-cell" data-row="5" data-col="0"></td>
+
+              <td class="cell dark-cell" data-row="5" data-col="1">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="5" data-col="2"></td>
+
+              <td class="cell dark-cell" data-row="5" data-col="3">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="5" data-col="4"></td>
+
+              <td class="cell dark-cell" data-row="5" data-col="5">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="5" data-col="6"></td>
+
+              <td class="cell dark-cell" data-row="5" data-col="7">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+            </tr>
+
+            <!-- ROW 7 -->
+            <tr>
+              <td class="cell dark-cell" data-row="6" data-col="0">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="6" data-col="1"></td>
+
+              <td class="cell dark-cell" data-row="6" data-col="2">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="6" data-col="3"></td>
+
+              <td class="cell dark-cell" data-row="6" data-col="4">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="6" data-col="5"></td>
+
+              <td class="cell dark-cell" data-row="6" data-col="6">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="6" data-col="7"></td>
+            </tr>
+
+            <!-- ROW 8 -->
+            <tr>
+              <td class="cell light-cell" data-row="7" data-col="0"></td>
+
+              <td class="cell dark-cell" data-row="7" data-col="1">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="7" data-col="2"></td>
+
+              <td class="cell dark-cell" data-row="7" data-col="3">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="7" data-col="4"></td>
+
+              <td class="cell dark-cell" data-row="7" data-col="5">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+
+              <td class="cell light-cell" data-row="7" data-col="6"></td>
+
+              <td class="cell dark-cell" data-row="7" data-col="7">
+                <img
+                  class="piece white-piece"
+                  src="/mini-project/checkers/assets/images/white-piece.png"
+                  alt="White Piece"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="/mini-project/checkers/js/script.js"></script>
+  </body>
+</html>
