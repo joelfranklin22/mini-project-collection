@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>QUIZ TIME</title>
+    <script>
+        function store() {
+            localStorage.clear();
+            localStorage.setItem("question-1", document.querySelector("input[name='quest-1']:checked").value);
+        }
+    </script>
+    <script>
+        let sec = 15;
+        let interval;
+        function startTimer() {
+            // localStorage.removeItem(question-1);
+            interval = setInterval(function () {
+                document.getElementById('timer').innerHTML = sec + ' Sec Left';
+                sec--;
+                if (sec === 0) {
+                    clearInterval(interval);
+                    location.replace("q2.html");
+                }
+            }, 1000);
+        }
+
+        document.getElementById('start').addEventListener('click', startTimer);
+    </script>
+</head>
+
+<body onload="startTimer()">
+    <div class="container">
+
+        <div class="header">
+            <h1>Quiz Time</h1>
+            <div class="end-1">1 Out Of 5</div>
+            <div class="front-end" id="timer">15 Sec Left</div>
+        </div>
+
+        <div class="back-img"><img src="2.jpg" alt=""></div>
+        <div class="question-1 ">1.They fly at night; you'd better run. These winged things are not much fun.</div>
+        <form class="choice" method="get" action="q2.html">
+            <div class="choice-1"><input type="radio" name="quest-1" id="box-1" value="Birds"
+                    value=" ">&emsp;<span>A.Birds</span></input></div>
+            <div class="choice-2"><input type="radio" name="quest-1" id="box-2" value="Bats"
+                    value=" ">&emsp;<span>B.Bats</span></input></div>
+            <div class="choice-3"><input type="radio" name="quest-1" id="box-3" value="Eagles"
+                    value=" ">&emsp;<span>C.Eagles</span></input></div>
+            <div class="choice-4"><input type="radio" name="quest-1" id="box-4" value="Witches"
+                    value=" ">&emsp;<span>D.Witches</span></input></div>
+            <div class="end-2"><input type="submit" value="Next" onclick="store()"></div>
+        </form>
+    </div>
+</body>
+
+</html>
