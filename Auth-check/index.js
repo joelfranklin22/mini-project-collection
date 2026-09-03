@@ -7,9 +7,10 @@ const path = "./data.json";
 const git = simpleGit();
 
 // Start and end dates
-let date = moment.parseZone("2025-03-14T12:00:00+05:30");
 
-const endDate = moment.parseZone("2025-05-18T12:00:00+05:30");
+let date = moment.parseZone("2025-10-01T12:00:00+05:30");
+
+const endDate = moment.parseZone("2025-11-30T12:00:00+05:30");
 
 const makeCommits = async () => {
   while (date.isSameOrBefore(endDate, "day")) {
