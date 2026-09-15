@@ -1,0 +1,74 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style> -->
+        /* #a,
+        #b,
+        #c,
+        #d,
+        #e {
+            display: none;
+        } */
+
+        /* img {
+            height: 97vh;
+            width: 100%;
+            position: relative;
+        }
+
+        .content {
+            position: absolute;
+            top: 30%;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 10px black;
+            font-weight: 900;
+            left: 30%;
+            font-size: 4rem;
+            color: white;
+
+        }
+
+        input#btn {
+            position: absolute;
+            top: 44%;
+            left: 40%;
+            padding: 20px 46px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0px 0px 10px black inset, 0px 0px 10px black;
+            font-size: 20px;
+        }
+    </style> */
+    <script>
+        function store() {
+            document.getElementById("a").value = localStorage.getItem("question-1");
+            document.getElementById("b").value = localStorage.getItem("question-2");
+            document.getElementById("c").value = localStorage.getItem("question-3");
+            document.getElementById("d").value = localStorage.getItem("question-4");
+            document.getElementById("e").value = localStorage.getItem("question-5");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <img src="2.jpg" alt="">
+        <div class="content">Check Your Quiz Score</div>
+    </div>
+    <!-- -->
+    <form action="http://localhost:8080/Quiz/connector ">
+
+        <input type="text" id="a" name="a">
+        <input type="text" id="b" name="b">
+        <input type="text" id="c" name="c">
+        <input type="text" id="d" name="d">
+        <input type="text" id="e" name="e">
+        <input type="submit" value="Check Your Score" onclick="store()" id="btn">
+    </form>
+</body>
+
+</html>

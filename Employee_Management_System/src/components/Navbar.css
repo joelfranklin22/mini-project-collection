@@ -1,0 +1,59 @@
+.navBar {
+  position: fixed;
+
+  top: 90px;
+  left: 20px;
+
+  width: 250px;
+  height: calc(100vh - 110px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #e0e5ec;
+
+  box-shadow:
+    -8px -8px 16px #ffffff,
+    8px 8px 16px #a3b1c6;
+
+  border-radius: 20px;
+  padding: 1rem;
+}
+.navBar-card {
+  margin: 0;
+  padding: 0;
+}
+.navBar-items {
+  list-style: none;
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  cursor: pointer;
+
+  background: transparent;
+  box-shadow: none;
+  border-radius: 12px;
+}
+.navBar-items:hover {
+  box-shadow: -2px -2px 4px #ffffff 2px 2px 4px #a3b1c6;
+}
+
+.navBar-items.active {
+  background: #fff;
+  box-shadow:
+    inset -4px -4px 8px #ffffff,
+    inset 4px 4px 8px #a3b1c6;
+}
+
+.log-out {
+  padding: 1rem;
+
+  cursor: pointer;
+
+  background-color: #e0e5ec;
+  box-shadow:
+    -4px -4px 8px #ffffff,
+    4px 4px 8px #a3b1c6;
+  border-radius: 12px;
+}

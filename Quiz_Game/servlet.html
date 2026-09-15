@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+        h1{
+            position: absolute;
+            top: 0%;
+            left:40%;
+            font-size: 3.5rem;
+            color: white;
+            z-index: 2;
+            text-shadow: 0px 0px 5px black;
+        }
+        table{
+            position: absolute;
+            top: 23%;
+            border-collapse: collapse;
+            border-color: white;
+            left: 7%;
+            font-size: 1.5rem;
+            box-shadow: 0px 0px 10px black,0px 0px 10px black;
+        }
+        th{
+            color: white;
+            font-size: 1.8rem;
+        }
+        td{
+            box-shadow: 0px 0px 2px black inset;
+        }
+        td.ques{
+            max-width: 500px;
+            text-wrap:wrap;
+            text-align: justify;
+        }
+        .end{
+            position: absolute;
+            bottom: 10%;
+            left: 38%;
+            color: white;
+            font-size: 2.5rem;
+            text-shadow: 0px 0px 5px rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Result</h1>
+        <img src="2.jpg" alt="">
+        <table border="1" cellpadding="10px">
+                    <tr>
+                        <th>Question</th>
+                        <th>Your Answer</th>
+                        <th>Wrong Answer/Correct Answer</th>
+                        <th>Score</th>
+                    </tr>
+                    <tr>
+                        <td class="ques">1.They fly at night; you'd better run. These winged things are not much fun.</td>
+                        <td>"+a1+"</td>
+                        <td>"+ans+"</td>
+                        <td>You Scored :"+sc+"</td>
+                    </tr>
+                    <tr>
+                        <td class="ques">2.A little bite will make you itch, make you sneeze, make you twitch.</td>
+                        <td>"+a2+"</td>
+                        <td>"+ans+"</td>
+                        <td>You Scored :"+sc+"</td>
+                    </tr>
+                    <tr>
+                        <td class="ques">3.His fangs are sharp; he likes your taste.</td>
+                        <td>"+a3+"</td>
+                        <td>"+ans+"</td>
+                        <td>You Scored :"+sc+"</td>
+                    </tr>
+                    <tr>
+                        <td class="ques">4.They grow much faster than bamboo. Take care, or they'll come after you.</td>
+                        <td>"+a4+"</td>
+                        <td>"+ans+"</td>
+                        <td>You Scored :"+sc+"</td>
+                    </tr>
+                    <tr>
+                        <td class="ques">5.Don't be fooled; it isn't thunder. Staying put would be a blunder.</td>
+                        <td>"+a5+"</td>
+                        <td>"+ans+"</td>
+                        <td>You Scored :"+sc+"</td>
+                    </tr>
+        </table>
+        <div class="end">You Scored :: "+count+"</div>
+    </div>
+</body>
+</html>

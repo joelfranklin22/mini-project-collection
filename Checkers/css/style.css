@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.board-structure {
+ 
+
+  position: relative;
+  left: 50%;
+  top: 2rem;
+  transform: translateX(-50%);
+
+  border: 5px solid blue;
+  border-collapse: collapse;
+}
+tr,
+td {
+  border: 2px solid red;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+}
+img {
+  width: 80%;
+  height: 80%;
+  cursor: pointer;
+}
+.dark-cell {
+  background-color: #769656;
+}
+
+.light-cell {
+  background-color: #eeeed2;
+}

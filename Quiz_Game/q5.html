@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>QUIZ TIME</title>
+    <script>
+        function onstore() {
+            localStorage.setItem("question-5", document.querySelector("input[name='quest-5']:checked").value);
+        }
+    </script>
+    <script>
+        let sec = 15;
+        let interval;
+        function startTimer() {
+            interval = setInterval(function () {
+                document.getElementById('timer').innerHTML = sec + ' Sec Left';
+                sec--;
+                if (sec === 0) {
+                    clearInterval(interval);
+                    document.getElementById('timer').innerHTML = "Time Over";
+                    location.replace("result.html");
+                }
+            }, 1000);
+        }
+        document.getElementById('start').addEventListener('click', startTimer);
+    </script>
+</head>
+
+<body onload="startTimer()">
+    <div class="container">
+
+        <div class="header">
+            <h1>Quiz Time</h1>
+            <h1>Quiz Time</h1>
+            <div class="front-end" id="timer">15 Sec Left</div>
+            <div class="end-1">5 Out Of 5</div>
+        </div>
+        <div class="back-img"><img src="2.jpg" alt=""></div>
+        <div class="question-1 q1">5.Don't be fooled; it isn't thunder. Staying put would be a blunder.</div>
+        <form class="choice" action="result.html">
+            <div class="choice-1"><input type="radio" name="quest-5" id="box-1"
+                    value="Stampede">&emsp;<span>A.Stampede</span></input></div>
+            <div class="choice-2"><input type="radio" name="quest-5" id="box-2"
+                    value="Horses">&emsp;<span>B.Horses</span></input></div>
+            <div class="choice-3"><input type="radio" name="quest-5" id="box-3"
+                    value="Earthquake">&emsp;<span>C.Earthquake</span></input></div>
+            <div class="choice-4"><input type="radio" name="quest-5" id="box-4"
+                    value="Arrows">&emsp;<span>D.Arrows</span></input></div>
+            <div class="end-2"><input type="submit" value="submit" onclick="store()"></div>
+        </form>
+
+    </div>
+</body>
+
+</html>

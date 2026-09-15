@@ -1,0 +1,206 @@
+@media screen and (min-width:800px) {
+    .Menu-bar{
+        display: none;
+    }
+}
+@media only screen and (max-width:800px) {
+     *{
+        overflow-x: hidden;
+    }
+    .background-image img{
+        padding-bottom: 170px;
+    }
+    .nav-list a{
+        display: none;
+    }
+    .Right-Side img{
+        display: none;
+    }
+    .Discord-Logo img{
+        width: 35px;
+    }
+    .discord{
+        position:absolute;
+        left:7%;
+    }
+    .Button {
+        padding: 5px 5px;
+    }
+    .Menu-bar i{
+        position: absolute;
+        left:82%;
+        color: white;
+        font-size:29px;
+        top:3.5%;
+    }
+    .Login-Button{
+        position: absolute;
+        left:50%;
+    }
+/* HERO CONTENT STARTS HERE */
+.hero-text{
+    position: absolute;
+    top:12%;
+    left: 20px;
+    min-width:85%;
+    font-size:1rem;
+}
+.hero-Subtitle{
+    position: absolute;
+    font-size:1.1rem;
+    left: 20px;
+    text-align: left;
+    min-width:90%;
+    top:27%;
+}
+/* HERO CONTENT ENDS HERE */
+.hero-link-1 a{
+    position: absolute;
+    top: 50%;
+    margin-left:17px;
+     left: 0%;
+     padding: 13px 10px 13px 70px;
+     min-width: 200px;
+     max-width: 600px;
+     border-radius: 30px;
+}
+ i{
+    position: absolute;
+    left:13%;
+    top:38%;
+}  
+.hero-link-2{
+    right:10%;
+
+}
+.hero-link-2 button{
+    margin-left: 30px;
+    padding: 17px 20px 17px 20px ;
+}
+.Left-Side{
+    position: absolute;
+    right:30%;
+}
+.Left-Side img{
+    width: 300px;
+}
+/* CONTENT MEDIA STARTING */
+    .section1{
+        margin-top:30%;
+    }
+    .Study-group img{
+        position:absolute;
+        max-width: 90%;
+        bottom: -65%;
+        left:7%;
+        z-index: 88;
+        font-size: 1.1rem;
+    }
+    .Study-Title{
+        position: absolute;
+        z-index: 2;
+        left:35px;
+        bottom: -72%;
+        font-size:20px;
+        min-width:250px;
+        max-width:400px;
+    }
+    .Study-About{
+        position: absolute;
+        bottom:-93%;
+        font-size:1.1rem;
+        left: 35px;
+        /* line-height:1.63; */
+        min-width:250px;
+        max-width:400px;
+        font-family: 'Josefin Slab', serif;
+    }
+    .section2{
+        margin-top: 300px;
+        padding: 70% 0 70% 0;
+    }
+    .Voice-Image img{
+        position:absolute;
+        max-width:90%;
+        bottom:50%;
+        left:6%;
+        z-index: 4;
+    }
+    .Voice-Title{
+        position:absolute;
+        font-size: 20px;
+        left: 20px;
+        top:55%;
+        z-index: 5;
+        min-width:250px;
+        max-width:300px;
+    }
+    .Voice-About{
+        position: absolute;
+        z-index: 6;
+        left: 20px;
+        font-size:1.1rem;
+        min-width:250px;
+        max-width:400px;
+        top:62%;
+    }
+    /* .section3{
+
+    } */
+    .Community img{
+            position: relative;
+            max-width:90%;
+            z-index: 7;
+            margin-top:-130px;
+            left: 15px;
+    }
+    .Community-Title{
+        position: absolute;
+        left: 20px;
+        top:65%;
+        z-index: 8;
+        font-size:1.2rem;
+    }
+    .Community-About{
+        position: absolute;
+        left:20px;
+        top: 72%;
+        z-index: 9;
+        font-size:1.1rem;
+        max-width:400px;
+    }
+    .section4{
+            bottom: 150px;    
+        }
+    .Tech img{
+        position: relative;
+        max-width:90%;
+        top:-80px;
+        left:5%;
+        z-index: 10;
+    }
+    .Tech-Title{
+        position: absolute;
+        left: 20px;
+        font-size: 16px;
+        max-width: 400px;
+        top:5%;
+        z-index: 11;
+        min-width:250px;
+        max-width:400px;
+    }
+    .Tech-About{
+        position: absolute;
+        left: 20px;
+        text-align: left;
+        font-size:1.1rem;
+        top:16%;
+        max-width: 400px;
+        z-index: 12;
+    }
+    .section5{
+        position: relative;
+        padding-bottom: -200px;
+    }
+
+}

@@ -1,0 +1,84 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.sql.*;
+import java.text.DecimalFormat;
+public class db extends HttpServlet {   
+    @Override
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter p=response.getWriter();
+        String reg=request.getParameter("reg_no"),
+        dob=request.getParameter("dob");
+        String ra="U",o="O",a_="A+",a="A",b_="B+",b="B",c="C";
+        try
+        {
+           Class.forName("com.mysql.jdbc.Driver");
+           Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/ishwarya","root","");
+           PreparedStatement ps=conn.prepareStatement("select * from student where REGNO=? AND NAME = ?");
+           ps.setString(1,reg);
+           ps.setString(2,dob);
+           ResultSet rs=ps.executeQuery();
+           if(rs.next())
+           {
+            p.println("<center><br>");
+            p.println("<h2 style=margin-left:50px\"background-color:pink;\"><u>STUDENT RESULT DETAILS</u></h2>");
+            p.println("<h4 style=\"color:GREEN;\">"+" Register Number: " +rs.getString(1)+"</h4>");
+            p.println("<h4 style=\"color:GREEN;\">"+"Student Name: " + rs.getString(2)+"</h4>"); 
+            p.println("<table border=1 height=\"300\" width=\"600\"style=\"border-collapse:pink; text-align:center; background-color:lavender;\">");
+p.println("<tr>");
+p.println("<th>SI NO</th>");
+p.println("<th>Subject Code</th>");
+p.println("<th>Subject Name</th>");
+p.println("<th>Grades</th>");
+p.println("<th>Result</th>");
+p.println("</tr>");
+p.println("<tr>");
+p.println("<td>1.</td>");
+p.println("<td>CCS375</td>");
+p.println("<td>Web Technologies</td>");
+p.println("<td>" + rs.getString(3) + "</td>");
+if(!ra.equals(rs.getString(3))){
+p.println("<td style=\"color:green;\">P</td>");
+}
+else{
+    p.println("<td style=\"color:red;\">RA</td>");
+}
+p.println("<tr>");
+p.println("<td>2.</td>");
+p.println("<td>CCS358</td>");
+p.println("<td>Principles of Programming Languages</td>");
+p.println("<td>" + rs.getString(4) + "</td>");
+if(!ra.equals(rs.getString(4))){
+p.println("<td style=\"color:GREEN;\">P</td>");
+}
+else{
+    p.println("<td style=\"color:red;\">RA</td>");
+}
+p.println("<tr>");
+p.println("<td>3.</td>");
+p.println("<td>CSC364</td>");
+p.println("<td>Soft Computing</td>");
+p.println("<td>" + rs.getString(5) + "</td>");
+if(!ra.equals(rs.getString(5))){
+p.println("<td style=\"color:GREEN;\">P</td>");
+}
+else{
+    p.println("<td style=\"color:red;\">RA</td>");
+}
+        }
+           else{
+               p.println("Please Enter Valid Register Number or Date Of Birth.No Records Found on entetred Register Number");
+           }
+        }
+        catch(Exception e){
+            p.println("Sorry try again");
+            
+        }
+        }
+       
+    }

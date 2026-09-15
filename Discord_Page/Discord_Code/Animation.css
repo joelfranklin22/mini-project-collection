@@ -1,0 +1,32 @@
+.section4{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1.2s all ease;
+  }
+
+  .section4.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .section3{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1.2s all ease;
+  }
+
+  .section3.active {
+    transform: translateY(0);
+    opacity: 1;
+  }.section2{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1.2s all ease;
+  }
+
+  .section2.active {
+    transform: translateY(0);
+    opacity: 1;
+  }

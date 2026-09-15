@@ -1,0 +1,122 @@
+*::selection{
+    background-color:#6f93fe;
+}
+body{
+    margin: 0;
+}
+  .container{
+    overflow-x: hidden;
+    background-color:rgb(64,78,237);
+    position: relative;  
+    } 
+.Right-Side{
+    position: absolute;
+    left: 74%;
+    bottom: 0;
+}
+.Left-Side{
+    position: absolute;
+    right: 72.5%;
+    bottom: 0;
+}  
+.Nav-Bar{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    padding-top: 20px;
+} 
+.nav-list{
+    display: flex;
+}
+.nav-list-items,.nav-list-items a{
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+    margin-right:20px;
+    font-family: 'Patua One', cursive;
+}
+.nav-list-items a:hover{
+    text-decoration: underline;
+}
+.discord{
+    display: flex;
+    align-items: center;
+}
+.discord-link{
+    color: white;
+    text-decoration: none;
+    padding-left: 7px;
+    font-family: 'Almendra', serif;
+    font-size: 20px;
+}
+.Button,.Button a{
+    display: flex;
+    text-decoration: none;
+    color:rgb(0,0,0);
+    border: none;
+    border-radius:40px;
+    padding: 5px 10px;
+    margin-top: 3px;
+    font-size: 14px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 1rem;
+}
+.Button:hover a{
+    color:rgb(64,78,237);
+}
+.hero-text{
+    position: absolute;
+    right:32%;
+    top:26%;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+}
+.hero-Subtitle{
+    position: absolute;
+    right:21%;
+    top:45%;
+    color: white;
+    line-height: 1.625;
+    font-size: 23px;
+    text-align: center;
+    max-width: 840px;
+}
+.hero-link-1 a{
+    position: absolute;
+    background-color: white;
+    font-family: 'Mate', serif; 
+    font-size:22px;
+    color: black;
+    text-decoration: none;
+    padding: 12px 35px 12px 35px;
+    border-radius:30px;
+    top: 65.5%;
+    right: 52%;
+}
+.hero-link-1 a:hover{
+   color:rgb(64,78,237);
+}
+i{
+    position: absolute;
+    left: 10px;
+}
+.hero-link-2{
+    position: absolute;
+    top: 65%;
+    right: 27%;
+    cursor: pointer;
+} 
+.hero-link{
+    background-color:#23272a;
+    color:rgb(255, 255, 255);
+    border-radius:30px;
+    padding: 16px 33px 16px 33px;
+    font-family: 'Mate', serif;
+    font-size:22px;
+    cursor: pointer;
+}
+.hero-link-2:hover{
+    box-shadow:0 0 2px 1px black; 
+    border-radius: 30px;
+}
