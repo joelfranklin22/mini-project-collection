@@ -1,12 +1,16 @@
+.formInput {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .formItems {
   width: 100%;
-  max-width: 400px;
-  height: 400px;
+  max-width: 420px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
 
   padding: 2rem;
@@ -16,24 +20,12 @@
 
   box-shadow:
     -8px -8px 16px #ffffff,
-     8px 8px 16px #a3b1c6;
+    8px 8px 16px #a3b1c6;
 }
 
-.formInput {
-  width: 800px;
-  padding: 2rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* INPUTS */
-
-input,select {
+.formItems input,
+.formItems select {
   width: 80%;
-  box-sizing: border-box;
-
   padding: 0.8rem 1rem;
 
   border: none;
@@ -42,65 +34,43 @@ input,select {
 
   background: #e0e5ec;
   color: #333;
+  font-size: 1rem;
 
   box-shadow:
     -4px -4px 8px #ffffff,
-     4px 4px 8px #a3b1c6;
+    4px 4px 8px #a3b1c6;
 
   transition: all 0.3s ease;
 }
 
-input,select::placeholder {
+.formItems input::placeholder {
   color: #777;
 }
-/* FOCUS EFFECT */
 
-input,select:focus {
+.formItems input:focus,
+.formItems select:focus {
   background: #e6ebf2;
-
   box-shadow:
     inset -4px -4px 8px #ffffff,
     inset 4px 4px 8px #a3b1c6;
-
-  transform: scale(1.02);
 }
 
-/* BUTTON */
-
-button {
+.formItems button {
   width: 80%;
-  box-sizing: border-box;
-
-  padding: 0.8rem 1rem;
-
-  border: none;
-  border-radius: 10px;
-
-  background: #0266f3;
-  color: #ffffff;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  box-shadow:
-    -4px -4px 8px #ffffff,
-     4px 4px 8px #a3b1c6;
-
-  transition: all 0.2s ease;
 }
 
-/* BUTTON HOVER */
-
-button:hover {
-  transform: translateY(-2px);
+.cancel-btn {
+  background: #e0e5ec;
+  color: #333;
 }
 
-/* BUTTON CLICK */
+.form-message {
+  min-height: 1.2rem;
+  font-size: 0.9rem;
+  color: #0b7a3b;
+}
 
-button:active {
-  box-shadow:
-     -2px -2px 5px #000000,
-     2px 2px 6px #000000;
-
-  transform: translateY(0);
+.formItems select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

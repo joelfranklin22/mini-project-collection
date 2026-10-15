@@ -1,14 +1,14 @@
 import { useContext } from "react";
-import { PassContext, PageContext } from "./context/PageContext"; // ← both import
+import { PassContext, PageContext } from "./context/PageContext";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import AddEmployee from "./components/AddEmployee";
-import "./App.css";
 import EmployeeDetails from "./components/EmployeeDetails";
 import Intro from "./Intro";
+import "./App.css";
 
 function HomeContent() {
-  const { activePage } = useContext(PassContext); // ← PassContext
+  const { activePage } = useContext(PassContext);
 
   return (
     <>
@@ -17,12 +17,8 @@ function HomeContent() {
         <Navbar />
         <div className="pageContent">
           {activePage === "home" && <Intro />}
-          {(activePage === "details" || activePage === "viewEmployee") && (
-            <EmployeeDetails />
-          )}
-          {(activePage === "add" || activePage === "addEmployee") && (
-            <AddEmployee />
-          )}
+          {activePage === "details" && <EmployeeDetails />}
+          {activePage === "add" && <AddEmployee />}
         </div>
       </div>
     </>
@@ -32,10 +28,9 @@ function HomeContent() {
 function Home() {
   return (
     <PageContext>
-      {" "}
-      {/* ← Provider wrap */}
-      <HomeContent /> {/* ← உள்ளே இருக்கு, so useContext works */}
+      <HomeContent />
     </PageContext>
   );
 }
+
 export default Home;

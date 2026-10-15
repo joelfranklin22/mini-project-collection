@@ -13,10 +13,8 @@ function Intro() {
         <p className="hero-description">Manage employee records with ease.</p>
 
         <div className="hero-actions">
-          <button onClick={() => setActivePage("addEmployee")}>
-            Add Employee
-          </button>
-          <button onClick={() => setActivePage("viewEmployee")}>
+          <button onClick={() => setActivePage("add")}>Add Employee</button>
+          <button onClick={() => setActivePage("details")}>
             View Employees
           </button>
         </div>
@@ -30,19 +28,21 @@ function Intro() {
             <li className="feature-item">Delete Employee</li>
           </ul>
         </div>
+
         <div className="statistics">
           <h2>Overall Statistics</h2>
           <ul>
-            <li className="data-items">Total Employees:{stats.total || 0}</li>
+            <li className="data-items">Total Employees: {stats.total}</li>
             <li className="data-items">
-              Total Department:{stats.department || 0}
+              Total Departments: {stats.department}
             </li>
-            <li className="data-items">Active:{stats.Active || 0}</li>
-            <li className="data-items">Not Active:{stats.notActive || 0}</li>
+            <li className="data-items">Active: {stats.active}</li>
+            <li className="data-items">Not Active: {stats.notActive}</li>
           </ul>
         </div>
       </div>
     </>
   );
 }
+
 export default Intro;
